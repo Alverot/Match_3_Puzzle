@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|d:\\github\\match_3_puzzle\\sorting match 3 puzzle game\\assets\\scripts\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|d:\\github\\match_3_puzzle\\sorting match 3 puzzle game\\assets\\scripts\\itemslayersistem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\itemslayersistem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|d:\\github\\match_3_puzzle\\sorting match 3 puzzle game\\assets\\scripts\\levelhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\assets\\scripts\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|d:\\github\\match_3_puzzle\\sorting match 3 puzzle game\\assets\\scripts\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\assets\\scripts\\dragdrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dragdrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\assets\\scripts\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -17,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\assets\\scripts\\itemslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\itemslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\assets\\scripts\\dragdrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79B67618-9BFD-D246-083C-12273ABAB8F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dragdrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,49 +38,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Timer.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\Timer.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Timer.cs",
-              "ToolTip": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\Timer.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Timer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "LevelHandler.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\LevelHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelHandler.cs",
+              "ToolTip": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\LevelHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LevelHandler.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T14:24:57.39Z",
+              "WhenOpened": "2024-09-12T13:57:24.46Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameLogic.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\GameLogic.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameLogic.cs",
-              "ToolTip": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\GameLogic.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ItemsLayerSistem.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\ItemsLayerSistem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ItemsLayerSistem.cs",
+              "ToolTip": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\ItemsLayerSistem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ItemsLayerSistem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T14:10:21.021Z",
+              "WhenOpened": "2024-09-13T09:44:25.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Timer.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\Timer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Timer.cs",
+              "ToolTip": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\Timer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Timer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T14:24:57.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameLogic.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\GameLogic.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameLogic.cs",
+              "ToolTip": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\GameLogic.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameLogic.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T14:10:21.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ShelfLogic.cs",
               "DocumentMoniker": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\ShelfLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ShelfLogic.cs",
               "ToolTip": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\ShelfLogic.cs",
               "RelativeToolTip": "Assets\\Scripts\\ShelfLogic.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwCkAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T10:16:15.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "ItemSlot.cs",
               "DocumentMoniker": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\ItemSlot.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ItemSlot.cs",
@@ -84,13 +116,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "DragDrop.cs",
               "DocumentMoniker": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\DragDrop.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DragDrop.cs",
               "ToolTip": "D:\\GITHUB\\Match_3_Puzzle\\Sorting match 3 puzzle game\\Assets\\Scripts\\DragDrop.cs",
               "RelativeToolTip": "Assets\\Scripts\\DragDrop.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwA4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-06T18:24:23.31Z"
             }

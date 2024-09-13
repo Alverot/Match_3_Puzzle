@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Runtime.CompilerServices;
+using System;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] float timeLeft;
 
-    // Update is called once per frame
+    public static event Action OnTimeFinish;
     void Update()
     {
+        bool sendEventOnce = false;
+
         if(timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
@@ -19,6 +23,11 @@ public class Timer : MonoBehaviour
         else
         {
             timeLeft = 0;
+            if(timeLeft == 0 && sendEventOnce == false)
+            {
+                OnTimeFinish?.Invoke();
+                sendEventOnce = true;
+            }
         }
         
         if(timeLeft < 0)

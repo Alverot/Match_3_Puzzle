@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject gameOverScreen;
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        Timer.OnTimeFinish += GameOver;
+    }
+    private void OnDisable()
+    {
+        Timer.OnTimeFinish -= GameOver;
+    }
+    private void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void GameOver()
+    {
+        gameOverScreen.SetActive(true);
+        gameOverScreen.transform.SetAsLastSibling();
     }
 }

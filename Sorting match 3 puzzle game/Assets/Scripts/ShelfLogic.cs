@@ -19,7 +19,7 @@ public class ShelfLogic : MonoBehaviour
     {
         Transform[] itemSlots = GetComponentsInChildren<Transform>();
         int i = 0;
-        string[] items = new string[3] { "-1", "0", "0" };
+        string[] items = new string[3] { "-1", "-2", "-3" };
 
         foreach (Transform slot in itemSlots)
         {
