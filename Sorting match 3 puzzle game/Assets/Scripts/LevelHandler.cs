@@ -8,12 +8,13 @@ using UnityEngine.UIElements;
 public class LevelHandler : MonoBehaviour
 {
     private string levelsFolderPath;
+    public GameObject gameLogic;
     public GameObject timerObject;
     public GameObject shelfPrefab;
     public Transform parentForShelfTransform;
+    
 
     public static event Action OnFinishLevelLoad;
-
 
     //positions for coordonate 0 in the canvas
     //"x": 960.0,
@@ -53,8 +54,11 @@ public class LevelHandler : MonoBehaviour
     {
         Timer timer = timerObject.GetComponent<Timer>();
         timer.timeLeft = level.time;
-        
-        for(int i = 0; i < level.shelfPositiosn.Length; i++)
+        GameLogic game = gameLogic.GetComponent<GameLogic>();
+        game.numberOfItemsLeft = level.totalNumberOfItems;
+
+
+        for (int i = 0; i < level.shelfPositiosn.Length; i++)
         {
             GameObject newestShelf  = Instantiate(shelfPrefab, level.shelfPositiosn[i], Quaternion.identity, parentForShelfTransform);
             
@@ -116,6 +120,7 @@ public class LevelHandler : MonoBehaviour
         }
 
 
+
         public void ConvertToSingleDymensionArray()
         {
             int lenght = items.Length;
@@ -134,12 +139,17 @@ public class LevelHandler : MonoBehaviour
         public void ConvertToMultiDymensionArray()
         {
             int k = 0;
+            totalNumberOfItems = 0;
             for (int i = 0; i < rowsForReconstruction; i++)
             {
                 for (int j = 0; j < columnsForReconstruction; j++)
                 {
                     items[i, j] = arrayForSerialize[k];
                     k++;
+                    if(items[i, j] != 0)
+                    {
+                        totalNumberOfItems++;
+                    }
                 }
             }
         }
