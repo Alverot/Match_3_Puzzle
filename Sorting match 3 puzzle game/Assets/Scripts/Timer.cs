@@ -8,7 +8,7 @@ using System;
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] float timeLeft;
+    public float timeLeft;
 
     public static event Action OnTimeFinish;
     void Update()

@@ -32,10 +32,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         //Debug.Log("OnEndDrag");
         transform.SetParent(parentAfterDrag);
         Image.raycastTarget = true;
-        if (OnItemMoved != null)
-        {
-            OnItemMoved();
-        }
+        OnItemMoved?.Invoke();
     }
 
     public void DestroySelf()

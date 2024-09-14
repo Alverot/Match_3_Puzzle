@@ -2,7 +2,7 @@
   "time": 30,
   "totalNumberOfItems": 6,
   "rowsForReconstruction": 3,
-  "columnsForReconstruction": 3,
+  "columnsForReconstruction": 6,
   "shelfPositiosn": [
     {
       "x": 960.0,
@@ -10,13 +10,13 @@
       "z": 0.0
     },
     {
-      "x": 1.0,
-      "y": 1.0,
+      "x": 1200.0,
+      "y": 700.0,
       "z": 0.0
     },
     {
-      "x": 0.0,
-      "y": 9.0,
+      "x": 740.0,
+      "y": 700.0,
       "z": 0.0
     }
   ],
@@ -25,10 +25,20 @@
     1,
     0,
     2,
-    0,
-    2,
+    1,
     2,
     1,
+    1,
+    0,
+    1,
+    1,
+    2,
+    1,
+    1,
+    0,
+    0,
+    0,
     0
+   
   ]
 }

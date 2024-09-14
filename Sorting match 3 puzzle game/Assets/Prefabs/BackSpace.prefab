@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6915152121567027165}
   - component: {fileID: 7600634325529837440}
   - component: {fileID: 926130235105353957}
-  - component: {fileID: 6814746017668297686}
   - component: {fileID: 2339567705339317203}
   m_Layer: 5
   m_Name: BackSpace
@@ -60,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.028430015, g: 0.04150939, b: 0.04018378, a: 0.1764706}
+  m_Color: {r: 0.028430015, g: 0.04150939, b: 0.04018378, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -77,18 +76,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6814746017668297686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7406074358263933987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f03cd6f47bdf87e4a84c1da20ce0e6b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2339567705339317203
 MonoBehaviour:
   m_ObjectHideFlags: 0

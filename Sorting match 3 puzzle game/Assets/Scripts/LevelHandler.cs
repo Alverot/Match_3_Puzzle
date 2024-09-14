@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -7,9 +8,11 @@ using UnityEngine.UIElements;
 public class LevelHandler : MonoBehaviour
 {
     private string levelsFolderPath;
+    public GameObject timerObject;
     public GameObject shelfPrefab;
     public Transform parentForShelfTransform;
-    public GameObject[] itemsPrefabs;
+
+    public static event Action OnFinishLevelLoad;
 
 
     //positions for coordonate 0 in the canvas
@@ -43,15 +46,22 @@ public class LevelHandler : MonoBehaviour
         level1.InitializeLoadedLevel();
         level1.ConvertToMultiDymensionArray();
 
-        Instantiate(shelfPrefab, level1.shelfPositiosn[0],Quaternion.identity,parentForShelfTransform);
-
-        
-
+        LoadLevelOnScreen(level1);
     }
 
-    private void LoadLevelOnScreen()
+    private void LoadLevelOnScreen(LevelData level)
     {
-
+        Timer timer = timerObject.GetComponent<Timer>();
+        timer.timeLeft = level.time;
+        
+        for(int i = 0; i < level.shelfPositiosn.Length; i++)
+        {
+            GameObject newestShelf  = Instantiate(shelfPrefab, level.shelfPositiosn[i], Quaternion.identity, parentForShelfTransform);
+            
+            ShelfLogic shelfLogic = newestShelf.GetComponent<ShelfLogic>();
+            shelfLogic.itemLayerList = level.ReturnItemArrayForShelf(i);
+        }
+        OnFinishLevelLoad?.Invoke();
     }
 
     private void SaveLevel(LevelData level, string fileName)
@@ -81,9 +91,6 @@ public class LevelHandler : MonoBehaviour
         }
 
     }
-
-
-
 
     private class LevelData
     {
@@ -135,6 +142,15 @@ public class LevelHandler : MonoBehaviour
                     k++;
                 }
             }
+        }
+        public int[] ReturnItemArrayForShelf(int row)
+        {
+            int[] rowArray = new int[columnsForReconstruction];
+            for (int i = 0; i < columnsForReconstruction; i++)
+            {
+                rowArray[i] = items[row, i];
+            }
+            return rowArray;
         }
     }
 }
