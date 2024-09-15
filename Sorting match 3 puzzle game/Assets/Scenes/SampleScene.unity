@@ -1858,7 +1858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 2138079431}
-  timeLeft: 10
+  timeLeft: 15
   victoryScreen: {fileID: 1476015964}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

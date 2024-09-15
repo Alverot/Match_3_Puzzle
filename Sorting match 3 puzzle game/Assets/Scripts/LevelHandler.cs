@@ -29,7 +29,7 @@ public class LevelHandler : MonoBehaviour
 
     private void Start()
     {
-        levelsFolderPath = Path.Combine(Application.dataPath, "Levels");
+        levelsFolderPath = Path.Combine(Application.streamingAssetsPath, "Levels");
         LevelProgress levelProgress = LoadProgresFromFile("CurentLevel.json");
         currentLevelUI.text = levelProgress.saveProgress.ToString();
         string levelName = string.Format("LV_{0}.json", levelProgress.saveProgress);
@@ -78,7 +78,6 @@ public class LevelHandler : MonoBehaviour
     {
         string json = JsonUtility.ToJson(level, true);
         string filePath = Path.Combine(levelsFolderPath, fileName);
-        System.IO.Directory.CreateDirectory(levelsFolderPath);
         File.WriteAllText(filePath, json);
         Debug.Log("Level data saved to: " + filePath);
     }
