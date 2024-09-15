@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameLogic : MonoBehaviour
 {
     public GameObject gameOverScreen;
     public GameObject victoryScreen;
+    public Text levelIndex;
+    public GameObject lastLevelForNow;
     public int numberOfItemsLeft;
 
     private void OnEnable()
@@ -30,6 +33,10 @@ public class GameLogic : MonoBehaviour
         if (numberOfItemsLeft == 0)
         {
             victoryScreen.SetActive(true);
+            if ("5" == levelIndex.text)
+            {
+                lastLevelForNow.SetActive(true);
+            }
         }
     }
     private void RestartGame()

@@ -1,44 +1,55 @@
 {
-  "time": 10,
+  "time": 30,
   "totalNumberOfItems": 6,
-  "rowsForReconstruction": 3,
+  "rowsForReconstruction": 4,
   "columnsForReconstruction": 6,
   "shelfPositiosn": [
     {
       "x": 960.0,
-      "y": 700.0,
+      "y": 680.0,
       "z": 0.0
     },
     {
       "x": 960.0,
-      "y": 900.0,
+      "y": 820.0,
       "z": 0.0
     },
     {
-      "x": 740.0,
-      "y": 500.0,
+      "x": 960.0,
+      "y": 540.0,
+      "z": 0.0
+    },
+    {
+      "x": 960.0,
+      "y": 400.0,
       "z": 0.0
     }
   ],
   "arrayForSerialize": [
-    1,
-    1,
     0,
     2,
-    1,
+    4,
     2,
-    1,
-    1,
     0,
-    1,
-    1,
+    0,
+    4,
+    0,
+    3,
+    0,
     2,
-    1,
-    1,
     0,
+    3,
     0,
+    4,
     0,
+    4,
+    3,
+    4,
+    3,
+    3,
+    3,
+    4,
     0
-   
+
   ]
 }

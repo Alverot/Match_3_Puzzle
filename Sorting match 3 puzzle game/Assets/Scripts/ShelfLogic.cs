@@ -38,14 +38,18 @@ public class ShelfLogic : MonoBehaviour
             while (indexForItemsLayerList < index + spacesOnAShelf) // there spaces on the front of the shelf
             {
                 string itemName = itemLayerList[indexForItemsLayerList].ToString();
-                for (int i = 0; i < itemsPrefabs.Length; i++)
+                if(itemName != "0")
                 {
-                    if (itemName == itemsPrefabs[i].name)
+                    for (int i = 0; i < itemsPrefabs.Length; i++)
                     {
-                        Vector3 tmp = new Vector3(); // i have set a grid so as long as it is the child of the borect object it shood be fine
-                        Instantiate(itemsPrefabs[i], tmp, Quaternion.identity, shelfPlaces[indexForCurentSlot++].transform);
+                        if (itemName == itemsPrefabs[i].name)
+                        {
+                            Vector3 tmp = new Vector3(); // i have set a grid so as long as it is the child of the borect object it shood be fine
+                            Instantiate(itemsPrefabs[i], tmp, Quaternion.identity, shelfPlaces[indexForCurentSlot].transform);
+                        }
                     }
                 }
+                indexForCurentSlot++;
                 indexForItemsLayerList++;
             }
         }
@@ -61,11 +65,12 @@ public class ShelfLogic : MonoBehaviour
                     if (itemName == itemsPrefabs[i].name)
                     {
                         Vector3 tmp = new Vector3(); // i have set a grid so as long as it is the child of the borect object it shood be fine
-                        GameObject backRowItem = Instantiate(itemsPrefabs[i], tmp, Quaternion.identity, backSpaces[indexForCurentSlot++].transform);
+                        GameObject backRowItem = Instantiate(itemsPrefabs[i], tmp, Quaternion.identity, backSpaces[indexForCurentSlot].transform);
                         Image image = backRowItem.GetComponent<Image>();
                         image.color = colorForBakrowItems;
                     }
                 }
+                indexForCurentSlot++;
                 index++;
             }
         }

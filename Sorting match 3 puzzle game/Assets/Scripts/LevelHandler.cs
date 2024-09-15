@@ -16,7 +16,7 @@ public class LevelHandler : MonoBehaviour
     public Transform parentForShelfTransform;
     public Text currentLevelUI;
 
-    private const int numberOfLevelsMade = 3;
+    private const int numberOfLevelsMade = 5;
 
 
     public static event Action OnFinishLevelLoad;
@@ -127,7 +127,7 @@ public class LevelHandler : MonoBehaviour
     private class LevelData
     {
         public int time;
-        public int totalNumberOfItems;
+        public int totalNumberOfItems;          //this is not necesary to be acurate in the savefile because it is calculated in ConvertToMultiDymensionArray() function
         public int rowsForReconstruction;
         public int columnsForReconstruction;
         public Vector3[] shelfPositiosn;        //the location of the shelfs in the level
