@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class LevelHandler : MonoBehaviour
@@ -12,7 +14,10 @@ public class LevelHandler : MonoBehaviour
     public GameObject timerObject;
     public GameObject shelfPrefab;
     public Transform parentForShelfTransform;
-    
+    public Text currentLevelUI;
+
+    private const int numberOfLevelsMade = 3;
+
 
     public static event Action OnFinishLevelLoad;
 
@@ -21,33 +26,34 @@ public class LevelHandler : MonoBehaviour
     //"y": 540.0,
     //"z": 0.0
 
+
     private void Start()
     {
-        levelsFolderPath = Path.Combine(Application.dataPath, "Levels");  //note REMEMBER TO CHANGE THIS IN THE FUTURE
-        /*
-        LevelData level1 = new LevelData(3, 3, 3);
-        level1.time = 30;
-        level1.shelfPositiosn[0] = new Vector3(3, 4, 0);
-        level1.shelfPositiosn[1] = new Vector3(1, 1, 0);
-        level1.shelfPositiosn[2] = new Vector3(0, 9, 0);
+        levelsFolderPath = Path.Combine(Application.dataPath, "Levels");
+        LevelProgress levelProgress = LoadProgresFromFile("CurentLevel.json");
+        currentLevelUI.text = levelProgress.saveProgress.ToString();
+        string levelName = string.Format("LV_{0}.json", levelProgress.saveProgress);
+        LevelData levelData = LoadLevelDataFromFile(levelName);
+        levelData.InitializeLoadedLevel();
+        LoadLevelOnScreen(levelData);
+    }
 
-        level1.items[0, 0] = 1;
-        level1.items[0, 1] = 2;
-        level1.items[0, 2] = 3;
-        level1.items[1, 0] = 4;
-        level1.items[1, 1] = 5;
-        level1.items[1, 2] = 6;
-        level1.items[2, 0] = 7;
-        level1.items[2, 1] = 8;
-        level1.items[2, 2] = 0;
-        level1.ConvertToSingleDymensionArray();
-        SaveLevel(level1, "LV_1.json");
-        */
-        LevelData level1 = LoadLevelDataFromFile("LV_1.json");
-        level1.InitializeLoadedLevel();
-        level1.ConvertToMultiDymensionArray();
-
-        LoadLevelOnScreen(level1);
+    public void LoadNextLevel()
+    {
+        LevelProgress levelProgress = LoadProgresFromFile("CurentLevel.json");
+        
+        if (levelProgress.saveProgress < numberOfLevelsMade)
+        {
+            levelProgress.saveProgress += 1;
+            SaveprogresToFile(levelProgress, "CurentLevel.json");
+        }
+        else
+        {
+            //start again form level 1
+            levelProgress.saveProgress = 1;
+            SaveprogresToFile(levelProgress, "CurentLevel.json");
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void LoadLevelOnScreen(LevelData level)
@@ -68,14 +74,12 @@ public class LevelHandler : MonoBehaviour
         OnFinishLevelLoad?.Invoke();
     }
 
-    private void SaveLevel(LevelData level, string fileName)
+    private void SaveLevelToFile(LevelData level, string fileName)
     {
         string json = JsonUtility.ToJson(level, true);
-
         string filePath = Path.Combine(levelsFolderPath, fileName);
+        System.IO.Directory.CreateDirectory(levelsFolderPath);
         File.WriteAllText(filePath, json);
-
-
         Debug.Log("Level data saved to: " + filePath);
     }
 
@@ -93,7 +97,32 @@ public class LevelHandler : MonoBehaviour
             Debug.Log("File does not exist");
             return null;
         }
+    }
 
+    private void SaveprogresToFile(LevelProgress levelProgress,string fileName)
+    {
+        string json = JsonUtility.ToJson(levelProgress, true);
+        string filePath = Path.Combine(levelsFolderPath, fileName);
+        File.WriteAllText(filePath, json);
+    }
+    private LevelProgress LoadProgresFromFile(string fileName)
+    {
+        string filePath = Path.Combine(levelsFolderPath, fileName);
+        if (File.Exists(filePath))
+        {
+            string json = File.ReadAllText(filePath);
+            LevelProgress levelProgress = JsonUtility.FromJson<LevelProgress>(json);
+            return levelProgress;
+        }
+        else
+        {
+            Debug.Log("File does not exist");
+            return null;
+        }
+    }
+    private class LevelProgress
+    {
+        public int saveProgress;
     }
 
     private class LevelData
@@ -117,6 +146,7 @@ public class LevelHandler : MonoBehaviour
         public void InitializeLoadedLevel()
         {
             items = new int[rowsForReconstruction, columnsForReconstruction];
+            ConvertToMultiDymensionArray();
         }
 
 

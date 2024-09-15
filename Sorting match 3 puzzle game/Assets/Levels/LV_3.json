@@ -1,0 +1,44 @@
+{
+  "time": 10,
+  "totalNumberOfItems": 6,
+  "rowsForReconstruction": 3,
+  "columnsForReconstruction": 6,
+  "shelfPositiosn": [
+    {
+      "x": 960.0,
+      "y": 900.0,
+      "z": 0.0
+    },
+    {
+      "x": 1500.0,
+      "y": 700.0,
+      "z": 0.0
+    },
+    {
+      "x": 740.0,
+      "y": 500.0,
+      "z": 0.0
+    }
+  ],
+  "arrayForSerialize": [
+    1,
+    1,
+    0,
+    2,
+    1,
+    2,
+    1,
+    1,
+    0,
+    1,
+    1,
+    2,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+   
+  ]
+}
