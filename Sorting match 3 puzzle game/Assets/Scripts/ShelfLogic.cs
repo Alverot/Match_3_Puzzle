@@ -12,10 +12,12 @@ public class ShelfLogic : MonoBehaviour
     public GameObject[] backSpaces;
 
     public GameObject[] itemsPrefabs;
-    public static event Action OnValidMatch;
+    
     private int indexForItemsLayerList;
     [SerializeField] private Color colorForBakrowItems;
     private const int spacesOnAShelf = 3;
+
+    public static event Action OnValidMatch;
 
 
     private void OnEnable()
@@ -113,6 +115,7 @@ public class ShelfLogic : MonoBehaviour
                 Transform item = slot.GetChild(0);
                 Drag drag = item.GetComponent<Drag>();
                 drag.DestroySelf();
+                
             }
             items[0] = "0";
             items[1] = "0";
