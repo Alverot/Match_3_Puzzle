@@ -14,6 +14,7 @@ public class GameLogic : MonoBehaviour
     public Text comboText;
     public GameObject lastLevelForNow;
     public int numberOfItemsLeft;
+    public Slider comboBarSlider;
 
     private int score = 0;
     private int multiplier = 1;
@@ -42,10 +43,12 @@ public class GameLogic : MonoBehaviour
         if (maxTime - combo > minTime)
         {
             timeLeft = maxTime - combo;
+            SetBarMax(timeLeft);
         }
         else
         {
             timeLeft = minTime;
+            SetBarMax(timeLeft);
         }
         if (combo == 3)
         {
@@ -90,18 +93,35 @@ public class GameLogic : MonoBehaviour
         }
 
     }
+    public void SetBarMax(float time)
+    {
+        comboBarSlider.maxValue = time;
+    }
+    public void SetBarValue(float time)
+    {
+        comboBarSlider.value = time;
+    }
+
+
     private void Update()
     {
-        if (timeLeft > 0)
+        SetBarValue(timeLeft);
+        if (numberOfItemsLeft > 0)
         {
-            timeLeft -= Time.deltaTime;
-
+            if (timeLeft > 0)
+            {
+                timeLeft -= Time.deltaTime;
+                SetBarValue(timeLeft);
+            }
+            else
+            {
+                multiplier = 1;
+                multiplierText.text = string.Format("x{0}", multiplier);
+                combo = 0;
+                comboText.text = string.Format("{0}", combo);
+            }
         }
-        else
-        {
-            multiplier = 1;
-            combo = 0;
-        }
+        
     }
 
 
